@@ -165,7 +165,15 @@ img {
     height: 250px;
 }
 
-  
+.skills-list {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 64px 0;
+}
+
+#skill {
+    margin: 0 24px 0 24px;
+}
 
 
 
