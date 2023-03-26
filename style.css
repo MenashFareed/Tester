@@ -129,6 +129,12 @@ a#links {
     margin-right: 24px;
 }
 
+.project-description-left {
+    max-width: 500px;
+    margin-right: 24px;
+    text-align: right;
+}
+
 .project-ad-container {
     position: relative;
     display: inline-block;
