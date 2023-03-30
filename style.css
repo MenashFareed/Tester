@@ -97,12 +97,11 @@ a#links {
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-style: outset;
+    border-style: solid;
+    border-width: 1px;
     margin: 0 16px 0 16px;
     width: calc(100%/2);
-    box-shadow: 0px 12px 64px 0px rgba(0, 0, 0, .3);
     border-radius: 24px;
-    overflow: hidden;
     padding: 16px;
 }
 
@@ -121,7 +120,7 @@ a#links {
 .project-item {
     display: flex;
     justify-content: center;
-    margin-top: 32px;
+    margin: 32px 0 32px 0;
 }
 
 .project-description {
@@ -175,7 +174,17 @@ img {
     margin: 0 24px 0 24px;
 }
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.divider {
+    border-top: 2px solid black;
+    width: 500px;
+}
 
 
 
