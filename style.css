@@ -281,35 +281,34 @@ img {
 }
 
 .fa-html5::after {
-  background-color:  #E44D26;
+  background-color: #e44d26;
 }
 
 .fa-css3-alt::after {
-  background-color:  #264de4;
+  background-color: #264de4;
 }
 
 .fa-react::after {
-  background-color:  #04d8f9;
+  background-color: #04d8f9;
 }
 .fa-angular::after {
-  background-color:  #d4173b;
+  background-color: #d4173b;
 }
 .fa-aws::after {
-  background-color:  #e47911;
+  background-color: #e47911;
 }
 .fa-java::after {
-  background-color:  #259797;
+  background-color: #259797;
 }
 .fa-github::after {
-  background-color:  #a304fa;
+  background-color: #a304fa;
 }
 .fa-firebase::after {
   background-color: #fbba04;
 }
 .fa-docker::after {
-  background-color:  #0db7ed;
+  background-color: #0db7ed;
 }
-
 
 /* Styling For Contact me buttons */
 
@@ -350,4 +349,65 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(2.2);
+}
+
+/* Section sliding animations */
+
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container {
+    flex-direction: column;
+  }
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 2s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 2s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
