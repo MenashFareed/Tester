@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   padding: 0;
   margin: 0;
@@ -9,13 +10,7 @@ body {
   width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span {
+h1, h2, h3, h4, h5, h6, span {
   color: black;
   text-align: center;
   line-height: 1.25;
@@ -30,6 +25,7 @@ li {
   list-style-position: inside;
 }
 
+/* Layout */
 .row {
   width: 100%;
   max-width: 1200px;
@@ -58,12 +54,7 @@ a {
   align-items: center;
 }
 
-#profile-keywords {
-  font-size: 24px;
-}
-
-.profile,
-.profile-description {
+.profile, .profile-description {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,6 +88,7 @@ a#links {
   font-size: 22px;
 }
 
+/* Academics and Experience */
 .academics-experience {
   display: flex;
   flex-direction: column;
@@ -114,25 +106,9 @@ a#links {
 .work-experience {
   display: flex;
   flex-direction: column;
-  margin: 0 16px 0 16px;
+  margin: 0 16px;
   border-radius: 24px;
   padding: 16px;
-}
-
-#left {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-#right {
-  text-align: right;
-  margin-right: 0;
-  padding-right: 0;
-}
-
-.work-img {
-  width: auto;
-  height: 80px;
 }
 
 .jobs {
@@ -143,6 +119,7 @@ a#links {
   margin: 32px 0 64px 0;
 }
 
+/* Contact Icons */
 .contact-icons {
   display: flex;
   justify-content: center;
@@ -162,23 +139,14 @@ img {
 }
 
 #skill {
-  margin: 0 24px 0 24px;
+  margin: 0 24px;
 }
 
+/* Projects */
 .project-list {
   display: flex;
   justify-content: space-evenly;
-}
-
-.divider {
-  border-top: 2px solid black;
-  width: 800px;
-}
-
-.project-item {
-  display: flex;
-  justify-content: center;
-  margin: 32px 0 32px 0;
+  flex-wrap: wrap;
 }
 
 .project-wrapper {
@@ -190,7 +158,7 @@ img {
   text-align: center;
   width: calc(100% / 3);
   border-radius: 24px;
-  margin: 32px 0 32px 0;
+  margin: 32px 0;
 }
 
 .project-description {
@@ -200,7 +168,7 @@ img {
   opacity: 0;
   transition: opacity 300ms, transform 450ms ease;
   color: white;
-  margin: 0 12px 0 12px;
+  margin: 0 12px;
 }
 
 .project-wrapper-bg {
@@ -232,6 +200,7 @@ img {
   width: 100%;
 }
 
+/* Tooltips */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -257,61 +226,7 @@ img {
   opacity: 1;
 }
 
-.tooltip .fab::after {
-  content: "";
-  z-index: -99;
-  position: absolute;
-  top: -7px;
-  left: 15px;
-  width: 75px;
-  height: 75px;
-  opacity: 0;
-  filter: blur(24px);
-  transition: all 260ms ease-in-out;
-  will-change: transform;
-}
-
-.tooltip:hover .fab::after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.fa-js::after {
-  background-color: #f0db4f;
-}
-
-.fa-html5::after {
-  background-color: #e44d26;
-}
-
-.fa-css3-alt::after {
-  background-color: #264de4;
-}
-
-.fa-react::after {
-  background-color: #04d8f9;
-}
-.fa-angular::after {
-  background-color: #d4173b;
-}
-.fa-aws::after {
-  background-color: #e47911;
-}
-.fa-java::after {
-  background-color: #259797;
-}
-.fa-github::after {
-  background-color: #a304fa;
-}
-.fa-firebase::after {
-  background-color: #fbba04;
-}
-.fa-docker::after {
-  background-color: #0db7ed;
-}
-
-/* Styling For Contact me buttons */
-
+/* Social Buttons */
 .social-buttons a {
   display: inline-flex;
   text-decoration: none;
@@ -345,24 +260,10 @@ img {
 }
 
 .social-buttons a:hover i {
-  background: linear-gradient(45deg, #22a6b3, #30336b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   transform: scale(2.2);
 }
 
-/* Section sliding animations */
-
-@media (max-width: 900px) {
-  section h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  section .text-container {
-    flex-direction: column;
-  }
-}
-
+/* Animations */
 .reveal {
   position: relative;
   opacity: 0;
@@ -409,5 +310,28 @@ img {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  p, li {
+    font-size: 18px;
+  }
+  .project-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .contact-icons img {
+    width: 100px;
+    height: auto;
   }
 }
